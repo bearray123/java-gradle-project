@@ -1,4 +1,5 @@
 import xyz.rh.kt.Player
+import xyz.rh.kt.utils.log
 
 /*
  * Copyright (C) 2022 Baidu, Inc. All Rights Reserved.
@@ -11,4 +12,5 @@ fun main(args: Array<String>) {
     println("Program arguments: ${args.joinToString()}")
 
     Player("xl")
+
 }
