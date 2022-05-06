@@ -8,7 +8,7 @@ plugins {
     application
 }
 
-group = "com.ty.jtest"
+group = "xyz.rh"
 version = "1.0-SNAPSHOT"
 
 repositories {

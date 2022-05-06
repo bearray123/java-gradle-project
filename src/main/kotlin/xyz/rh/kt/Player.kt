@@ -1,9 +1,10 @@
 /*
  * Copyright (C) 2022 Baidu, Inc. All Rights Reserved.
  */
-package xyz.ty.kt.utils
+package xyz.rh.kt
 
-import xyz.ty.utils.DotaGame
+import xyz.rh.kt.utils.log
+import xyz.rh.testj.DotaGame
 
 /*
  * Copyright (C) 2022 Baidu, Inc. All Rights Reserved.

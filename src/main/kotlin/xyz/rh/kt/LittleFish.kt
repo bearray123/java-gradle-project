@@ -1,7 +1,9 @@
 /*
  * Copyright (C) 2022 Baidu, Inc. All Rights Reserved.
  */
-package xyz.ty.kt.utils
+package xyz.rh.kt
+
+import xyz.rh.kt.utils.log
 
 /**
  * Created by xionglei01@baidu.com on 2022/5/5.

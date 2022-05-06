@@ -1,4 +1,4 @@
-import xyz.ty.kt.utils.Player
+import xyz.rh.kt.Player
 
 /*
  * Copyright (C) 2022 Baidu, Inc. All Rights Reserved.

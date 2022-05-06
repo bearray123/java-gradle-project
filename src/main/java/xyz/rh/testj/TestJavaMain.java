@@ -1,12 +1,12 @@
 /*
  * Copyright (C) 2022 Baidu, Inc. All Rights Reserved.
  */
-package xyz.ty.utils;
+package xyz.rh.testj;
 
-import xyz.ty.kt.utils.GameManager;
-import xyz.ty.kt.utils.Player;
+import xyz.rh.kt.GameManager;
+import xyz.rh.kt.Player;
 
-import static xyz.ty.kt.utils.UtilsKt.log;
+import static xyz.rh.kt.utils.UtilsKt.log;
 
 /**
  * Created by xionglei01@baidu.com on 2022/5/5.

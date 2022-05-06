@@ -1,7 +1,7 @@
 /*
  * Copyright (C) 2022 Baidu, Inc. All Rights Reserved.
  */
-package xyz.ty.kt.utils
+package xyz.rh.kt.utils
 
 
 /**
