@@ -12,15 +12,19 @@ import xyz.rh.testj.DotaGame
 /**
  * Created by xionglei01@baidu.com on 2022/5/5.
  */
-class Player(var name: String) {
+class Player(var name: String, var age : Int) {
 
     lateinit var gameToPlay: IGame
 
-    var age: Int = 0
 
     fun openGame() {
         log("正在打开游戏")
         gameToPlay = DotaGame(79, age)
+    }
+
+    override fun toString(): String {
+        return "{name: $name, age: $age" +
+                "}"
     }
 
 }

@@ -3,6 +3,8 @@
  */
 package xyz.rh.testj;
 
+import java.util.ArrayList;
+import java.util.concurrent.CopyOnWriteArrayList;
 import xyz.rh.kt.GameManager;
 import xyz.rh.kt.Player;
 
@@ -17,11 +19,12 @@ class TestJavaMain {
         log("haha, gradle");
         //fuck(null);
 
-        Player player1 = new Player("dodo");
+        Player player1 = new Player("dodo", 7);
         player1.setAge(18);
         player1.openGame();
 
         GameManager instance = GameManager.INSTANCE;
+
     }
 
 
