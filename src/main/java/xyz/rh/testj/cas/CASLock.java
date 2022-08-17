@@ -16,6 +16,7 @@ class CASLock {
 
     void lock() {
         int i=0;
+
         // 判断是否是空闲=true，
         // 如果不是空闲=false，继续while循环
         // 循环
