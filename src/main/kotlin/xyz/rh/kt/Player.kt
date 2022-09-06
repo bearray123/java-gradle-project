@@ -3,7 +3,7 @@
  */
 package xyz.rh.kt
 
-import xyz.rh.kt.utils.log
+import xyz.rh.kt.utils.xlog
 import xyz.rh.testj.DotaGame
 
 /*
@@ -18,7 +18,7 @@ class Player(var name: String, var age : Int) {
 
 
     fun openGame() {
-        log("正在打开游戏")
+        xlog("正在打开游戏")
         gameToPlay = DotaGame(79, age)
     }
 

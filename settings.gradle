@@ -1,2 +1,3 @@
 rootProject.name = 'java-gradle-project'
+include ':main'
 

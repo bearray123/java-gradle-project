@@ -12,7 +12,7 @@ import java.util.*
  */
 
 
-fun log(msg: Any?) {
+fun xlog(msg: Any?) {
 // yyyy-MM-dd HH:mm:ss.SS的大小写的含义
 // yyyy：代表年
 // M：月份数字。一位数的月份没有前导零

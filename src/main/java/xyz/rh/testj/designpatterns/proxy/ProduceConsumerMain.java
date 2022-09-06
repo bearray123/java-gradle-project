@@ -1,7 +1,7 @@
 /*
  * Copyright (C) 2022 Baidu, Inc. All Rights Reserved.
  */
-package xyz.rh.testj.designpatterns;
+package xyz.rh.testj.designpatterns.proxy;
 
 import java.util.concurrent.LinkedBlockingQueue;
 

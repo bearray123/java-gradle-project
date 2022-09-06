@@ -3,12 +3,12 @@
  */
 package xyz.rh.testj;
 
-import java.util.ArrayList;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.io.File;
+import java.util.concurrent.ArrayBlockingQueue;
 import xyz.rh.kt.GameManager;
 import xyz.rh.kt.Player;
 
-import static xyz.rh.kt.utils.UtilsKt.log;
+import static xyz.rh.kt.utils.UtilsKt.xlog;
 
 /**
  * Created by xionglei01@baidu.com on 2022/5/5.
@@ -16,14 +16,10 @@ import static xyz.rh.kt.utils.UtilsKt.log;
 class TestJavaMain {
 
     public static void main(String[] args) {
-        log("haha, gradle");
-        //fuck(null);
+        //xlog("haha, gradle");
 
-        Player player1 = new Player("dodo", 7);
-        player1.setAge(18);
-        player1.openGame();
-
-        GameManager instance = GameManager.INSTANCE;
+        System.out.println(123);
+        System.out.println("hello");
 
     }
 

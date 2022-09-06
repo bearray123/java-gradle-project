@@ -1,6 +1,7 @@
 plugins {
   id 'org.jetbrains.kotlin.jvm' version '1.6.20'
   id 'application'
+//  id 'java'
 }
 
 group = 'xyz.rh.jgp'
@@ -10,8 +11,32 @@ repositories {
   mavenCentral()
 }
 
+gradle.projectsEvaluated {
+  tasks.withType(JavaCompile) {
+    options.compilerArgs << "-Xlint" << "-verbose" << "-XprintRounds" << "-XprintProcessorInfo" << "-Xmaxerrs" << "100000"
+  }
+}
+
 dependencies {
   testImplementation 'org.jetbrains.kotlin:kotlin-test'
+
+
+  // 引入javapoet，生产java源代码
+  api 'com.squareup:javapoet:1.13.0'
+  project(':io_library')
+
+  //用来自动化注册注解处理器的服务，google提供
+  implementation 'com.google.auto.service:auto-service:1.0-rc7'
+  // annotationProcessor必须加上，否则使用auto-service在编译时不会自动生成.Processor文件
+  annotationProcessor 'com.google.auto.service:auto-service:1.0-rc7'
+
+
+  // 高效的反射库，底层通过ASM字节码插桩来实现，比反射要效率高很多
+  implementation 'com.esotericsoftware:reflectasm:1.11.9'
+
+
+
+
 }
 
 test {
@@ -26,12 +51,38 @@ compileTestKotlin {
   kotlinOptions.jvmTarget = '1.8'
 }
 
-compileJava {
+//compileJava {
 //  sourceCompatibility JavaVersion.VERSION_1_8
 //  targetCompatibility JavaVersion.VERSION_1_8
+//}
+
+tasks.withType(JavaCompile) {
+  // Try to turn them all off automatically
+  options.compilerArgs << '-Xlint:none'
+  options.compilerArgs << '-nowarn' // same as '-Xlint:none'
+
+  // Turn them off manually
+  options.compilerArgs << '-Xlint:-auxiliaryclass'
+  options.compilerArgs << '-Xlint:-cast'
+  options.compilerArgs << '-Xlint:-classfile'
+  options.compilerArgs << '-Xlint:-deprecation'
+  options.compilerArgs << '-Xlint:-dep-ann'
+  options.compilerArgs << '-Xlint:-divzero'
+  options.compilerArgs << '-Xlint:-empty'
+  options.compilerArgs << '-Xlint:-fallthrough'
+  options.compilerArgs << '-Xlint:-finally'
+  options.compilerArgs << '-Xlint:-options'
+  options.compilerArgs << '-Xlint:-overloads'
+  options.compilerArgs << '-Xlint:-overrides'
+  options.compilerArgs << '-Xlint:-path'
+  options.compilerArgs << '-Xlint:-processing'
+  options.compilerArgs << '-Xlint:-rawtypes'
+  options.compilerArgs << '-Xlint:-serial'
+  options.compilerArgs << '-Xlint:-static'
+  options.compilerArgs << '-Xlint:-try'
+  options.compilerArgs << '-Xlint:-unchecked'
+  options.compilerArgs << '-Xlint:-varargs'
 }
-
-
 
 //application {
 //  mainClassName = 'MainKt'
