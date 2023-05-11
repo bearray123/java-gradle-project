@@ -23,7 +23,6 @@ dependencies {
 
   // 引入javapoet，生产java源代码
   api 'com.squareup:javapoet:1.13.0'
-  project(':io_library')
 
   //用来自动化注册注解处理器的服务，google提供
   implementation 'com.google.auto.service:auto-service:1.0-rc7'
